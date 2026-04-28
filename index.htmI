@@ -2,25 +2,13 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Резюме Яни Чайковської</title>
+    <title>Мій сайт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Яна Чайковська</h1>
-<p>Email: yana@example.com</p>
-
-<h2>Освіта</h2>
-<ul>
-    <li>Національний університет водного господарства та природокористування</li>
-</ul>
-
-<h2>Навички</h2>
-<ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>Робота з Visual Studio Code</li>
-</ul>
+<h1>Привіт! Це мій сайт</h1>
+<h2>Я вчу HTML і CSS</h2>
 
 </body>
 </html>
