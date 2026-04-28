@@ -2,18 +2,40 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Список завдань</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої завдання</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="todo-list">
-        <h2>Список завдань</h2>
-        <ul>
-            <li class="checked">Опанувати HTML та CSS</li>
-            <li class="checked">Опанувати Git та GitHub</li>
-            <li>Опанувати JavaScript</li>
-            <li>Опанувати Node.js</li>
-        </ul>
+    <div class="todo-container">
+        <h1>Мої завдання</h1>
+        <div class="input-section">
+            <input type="text" placeholder="Введи завдання...">
+            <button class="add-btn">Додати</button>
+        </div>
+        <div class="task-list">
+            <div class="task-item">
+                <span>Опанувати HTML та CSS</span>
+                <div class="actions">
+                    <button class="done-btn">Готово</button>
+                    <button class="delete-btn">Видалити</button>
+                </div>
+            </div>
+            <div class="task-item">
+                <span>Опанувати Git та Github</span>
+                <div class="actions">
+                    <button class="done-btn">Готово</button>
+                    <button class="delete-btn">Видалити</button>
+                </div>
+            </div>
+            <div class="task-item">
+                <span>Опанувати JavaScript</span>
+                <div class="actions">
+                    <button class="done-btn">Готово</button>
+                    <button class="delete-btn">Видалити</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
