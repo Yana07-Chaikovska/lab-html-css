@@ -1,52 +1,38 @@
 body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
+    background-color: #d1d5db;
+    font-family: sans-serif;
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
-
-.todo-list {
+.todo-container {
     background: white;
-    padding: 20px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 450px;
+    text-align: center;
+}
+h1 { color: #4f46e5; margin-bottom: 25px; }
+.input-section { display: flex; gap: 10px; margin-bottom: 20px; }
+input {
+    flex: 1;
+    padding: 10px;
     border: 1px solid #ccc;
-    width: 350px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
 }
-
-h2 {
-    color: #2e7d32; /* Той самий зелений */
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 10px;
+.add-btn { background: #4f46e5; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f4f6;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
 }
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    padding: 10px 0 10px 35px;
-    position: relative;
-    font-size: 18px;
-    color: #2e7d32; /* Текст теж зелений */
-}
-
-/* Кружечки */
-li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #4caf50;
-    border-radius: 50%;
-}
-
-/* Галочки для перших двох */
-li:nth-child(1)::after, li:nth-child(2)::after {
-    content: '✔';
-    position: absolute;
-    left: 5px;
-    color: #4caf50;
-}
+.actions { display: flex; gap: 5px; }
+.done-btn { background: #6366f1; color: white; border: none; padding: 5px 10px; border-radius: 4px; font-size: 12px; }
+.delete-btn { background: #ef4444; color: white; border: none; padding: 5px 10px; border-radius: 4px; font-size: 12px; }
