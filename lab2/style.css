@@ -1,74 +1,68 @@
-/* Стиль для всієї сторінки */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
+    background-color: #f4f4f4;
+    font-family: sans-serif;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 100px;
-    margin: 0;
+    padding-top: 50px;
 }
 
-/* Контейнер списку */
-.todo-container {
+.todo-list {
     background: white;
-    width: 380px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border: 1px solid #d1d1d1;
-}
-
-/* Заголовок "Список завдань" */
-.header {
-    padding: 15px 20px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #008000; /* Темно-зелений як у завданні */
-    background: linear-gradient(to bottom, #ffffff, #f1f1f1);
-    border-bottom: 1px solid #ddd;
-    border-radius: 5px 5px 0 0;
-}
-
-/* Рядок завдання */
-.task {
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.task:last-child {
-    border-bottom: none;
-}
-
-/* Кружечок для галочки */
-.icon {
-    width: 24px;
-    height: 24px;
+    padding: 20px;
     border: 1px solid #ccc;
+    width: 350px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #2e7d32; /* Зелений колір як у завданні */
+    margin-top: 0;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+    padding-left: 35px;
+    position: relative;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Малюємо порожній кружечок */
+li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
     border-radius: 50%;
-    margin-right: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
 }
 
-/* Стиль для виконаних завдань (із зеленим текстом і галочкою) */
-.done .icon {
-    border-color: #4CAF50;
-    color: #4CAF50;
+/* Малюємо зелений кружечок з галочкою для виконаних завдань */
+li.checked {
+    color: #2e7d32;
     font-weight: bold;
+    text-decoration: line-through;
 }
 
-.done span {
-    color: #008000;
-    font-weight: bold;
-    text-decoration: line-through; /* Закреслення як на картинці */
+li.checked::before {
+    border-color: #4caf50;
+    background-color: transparent;
 }
 
-/* Стиль для невиконаних завдань */
-.task span {
-    color: #006400;
-    font-weight: 500;
+li.checked::after {
+    content: '✔';
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    color: #4caf50;
+    font-size: 16px;
 }
