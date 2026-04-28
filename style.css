@@ -1,57 +1,72 @@
 body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  text-align: center;
+  padding-top: 60px;
 }
 
-.todo-list {
-    background: white;
-    padding: 30px;
-    border: 1px solid #ccc;
-    width: 400px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+h1 {
+  color: #4caf50;
+  margin-bottom: 80px;
 }
 
-h2 {
-    color: #2e7d32;
-    margin-bottom: 20px;
-    font-size: 24px;
+.box {
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.password-row {
+  display: flex;
+  margin-bottom: 15px;
 }
 
-li {
-    padding: 12px 0 12px 40px;
-    position: relative;
-    font-size: 18px;
-    color: #2e7d32;
-    border-top: 1px solid #eee;
+#password {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background-color: #ddd;
 }
 
-li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 12px;
-    width: 22px;
-    height: 22px;
-    border: 2px solid #4caf50;
-    border-radius: 50%;
+.password-row button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px;
 }
 
-li:nth-child(1), li:nth-child(2) {
-    text-decoration: line-through;
+#length {
+  width: 190px;
 }
 
-li:nth-child(1)::after, li:nth-child(2)::after {
-    content: '✔';
-    position: absolute;
-    left: 6px;
-    top: 12px;
-    color: #4caf50;
+#lengthValue {
+  display: inline-block;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.options label {
+  background-color: #e5e5e5;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.generate {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
 }
