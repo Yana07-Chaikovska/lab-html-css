@@ -2,28 +2,37 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Резюме - Чайковська Яна</title>
+    <title>Список завдань</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f4f4; }
-        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; }
-        h2 { color: #e67e22; border-bottom: 2px solid #e67e22; }
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; display: flex; justify-content: center; padding-top: 50px; }
+        .todo-container { background: white; border: 1px solid #ddd; border-radius: 8px; width: 350px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .header { background: #f9f9f9; padding: 15px; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0; color: green; font-size: 20px; font-weight: bold; }
+        .task { display: flex; align-items: center; padding: 12px 15px; border-bottom: 1px solid #eee; font-size: 16px; color: #2c3e50; }
+        .task:last-child { border-bottom: none; }
+        .icon { width: 22px; height: 22px; margin-right: 15px; border-radius: 50%; border: 2px solid #ddd; display: flex; align-items: center; justify-content: center; }
+        .done .icon { border-color: #4CAF50; color: #4CAF50; font-weight: bold; }
+        .done span { text-decoration: line-through; color: green; font-weight: bold; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Чайковська Яна Русланівна</h1>
-        <p>Студентка НУВГП</p>
-        
-        <h2>Освіта</h2>
-        <p>Національний університет водного господарства та природокористування</p>
-        
-        <h2>Навички</h2>
-        <ul>
-            <li>Розробка вебсторінок (HTML/CSS)</li>
-            <li>Робота з системою Git та GitHub</li>
-            <li>Використання Visual Studio Code</li>
-        </ul>
+    <div class="todo-container">
+        <div class="header">Список завдань</div>
+        <div class="task done">
+            <div class="icon">✓</div>
+            <span>Опанувати HTML та CSS</span>
+        </div>
+        <div class="task done">
+            <div class="icon">✓</div>
+            <span>Опанувати Git та GitHub</span>
+        </div>
+        <div class="task">
+            <div class="icon"></div>
+            <span>Опанувати JavaScript</span>
+        </div>
+        <div class="task">
+            <div class="icon"></div>
+            <span>Опанувати Node.js</span>
+        </div>
     </div>
 </body>
 </html>
