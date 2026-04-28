@@ -1,49 +1,74 @@
+/* Стиль для всієї сторінки */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
     background-color: #f0f2f5;
-    color: #333;
-    margin: 0;
-    padding: 40px;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+    margin: 0;
 }
 
-.container {
+/* Контейнер списку */
+.todo-container {
     background: white;
-    max-width: 700px;
-    width: 100%;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 380px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #d1d1d1;
 }
 
-h1 {
-    color: #2c3e50;
-    text-align: center;
-    border-bottom: 3px solid #3498db;
-    padding-bottom: 10px;
+/* Заголовок "Список завдань" */
+.header {
+    padding: 15px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #008000; /* Темно-зелений як у завданні */
+    background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
 }
 
-h2 {
-    color: #2980b9;
-    margin-top: 25px;
-    font-size: 1.4rem;
+/* Рядок завдання */
+.task {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.task:last-child {
+    border-bottom: none;
 }
 
-li {
-    background: #ecf0f1;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 6px;
-    border-left: 4px solid #3498db;
+/* Кружечок для галочки */
+.icon {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-p {
-    font-size: 1.1rem;
+/* Стиль для виконаних завдань (із зеленим текстом і галочкою) */
+.done .icon {
+    border-color: #4CAF50;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.done span {
+    color: #008000;
+    font-weight: bold;
+    text-decoration: line-through; /* Закреслення як на картинці */
+}
+
+/* Стиль для невиконаних завдань */
+.task span {
+    color: #006400;
+    font-weight: 500;
 }
